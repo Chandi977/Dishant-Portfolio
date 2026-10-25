@@ -1,0 +1,348 @@
+.section {
+  --red: #a1261e;
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: var(--viewport-stage);
+  height: var(--viewport-stage-dynamic);
+  min-height: 0;
+  max-height: none;
+  padding-top: var(--nav-height);
+  color: #22211f;
+  background: #f1efea;
+  border: 1px solid #39312d;
+  border-bottom: 12px solid var(--red);
+  overflow: hidden;
+  scroll-margin-top: var(--nav-height);
+}
+
+.banner {
+  padding: clamp(9px, min(1vw, 1.7dvh), 19px) 2vw;
+  background: var(--red);
+  color: #fffdf8;
+  font-size: clamp(22px, min(2.9vw, 5dvh), 46px);
+  font-weight: 850;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  text-align: center;
+}
+
+.composition {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+.portfolio {
+  position: absolute;
+  left: 4.2%;
+  top: 6.6%;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  color: #77736c;
+  font-size: clamp(7px, min(0.66vw, 1.2dvh), 11px);
+  letter-spacing: 0.48em;
+}
+.portfolio i {
+  width: 12vw;
+  height: 1px;
+  background: #c9c5bc;
+}
+.title {
+  position: absolute;
+  z-index: 0;
+  left: 3.4%;
+  top: 9%;
+  margin: 0;
+  color: var(--red);
+  font-family:
+    var(--font-geist-sans),
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif;
+  font-size: clamp(7rem, min(13.5vw, 23dvh), 16rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.titleLine {
+  display: block;
+  overflow: hidden;
+}
+.titleLine > span {
+  display: block;
+}
+.portrait {
+  position: absolute;
+  z-index: 1;
+  left: -3.5%;
+  bottom: 0;
+  width: 60%;
+  height: 108%;
+  overflow: hidden;
+}
+.portrait img {
+  object-fit: cover;
+  object-position: center 8%;
+}
+.marginNote {
+  position: absolute;
+  z-index: 2;
+  left: 4%;
+  bottom: 14%;
+  margin: 0;
+  color: #77736c;
+  font-size: clamp(7px, min(0.72vw, 1.25dvh), 12px);
+  line-height: 1.9;
+  letter-spacing: 0.35em;
+}
+.marginNote b {
+  display: block;
+  font-weight: inherit;
+}
+.marginNote span {
+  display: block;
+  width: 2.4vw;
+  height: 1px;
+  background: var(--red);
+  margin-top: 1.6vw;
+}
+.profile {
+  position: absolute;
+  z-index: 2;
+  left: 58%;
+  right: 3.8%;
+  top: clamp(38px, 7%, 70px);
+}
+.firstName {
+  margin: 0 0 -0.2vw -0.5vw;
+  color: var(--red);
+  font-family: 'Brush Script MT', 'Segoe Script', cursive;
+  font-size: clamp(3.4rem, min(6.6vw, 9dvh), 5.5rem);
+  line-height: 1;
+  font-weight: 400;
+  transform: rotate(-7deg);
+  transform-origin: left center;
+}
+.firstName > span {
+  display: inline-block;
+}
+.lastName {
+  margin: 0;
+  font-family: Impact, 'Arial Narrow', sans-serif;
+  font-size: clamp(4.5rem, min(9.8vw, 13dvh), 8.5rem);
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 0.94;
+}
+.role {
+  margin: clamp(4px, 0.45vw, 8px) 0 0;
+  font-size: clamp(11px, min(1.35vw, 1.9dvh), 18px);
+  letter-spacing: 0.26em;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.redRule {
+  display: block;
+  width: 4.2vw;
+  height: 2px;
+  margin: clamp(7px, 1.2dvh, 13px) 0 clamp(6px, 1dvh, 11px);
+  background: var(--red);
+}
+.intro {
+  max-width: 50ch;
+  margin: 0;
+  font-size: clamp(16px, min(1.8vw, 2.7dvh), 24px);
+  line-height: 1.38;
+}
+.intro strong {
+  color: var(--red);
+  font-weight: 750;
+}
+.description {
+  max-width: 52ch;
+  margin: clamp(7px, 1.2dvh, 13px) 0;
+  font-size: clamp(15px, min(1.5vw, 2.4dvh), 21px);
+  line-height: 1.38;
+  color: #77736c;
+}
+.expertise {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  margin: clamp(7px, 1.2dvh, 13px) 0 clamp(5px, 0.8dvh, 9px);
+  color: var(--red);
+  font-size: clamp(12px, min(1.35vw, 2dvh), 18px);
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  white-space: nowrap;
+}
+.expertise i {
+  flex: 1;
+  height: 1px;
+  background: #ccc7be;
+}
+.list {
+  display: grid;
+  gap: clamp(4px, 0.7dvh, 8px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: clamp(15px, min(1.5vw, 2.4dvh), 21px);
+  line-height: 1.3;
+  color: #514d48;
+}
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 1.25vw;
+}
+.list li::before {
+  content: '';
+  width: 0.75vw;
+  height: 0.75vw;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+}
+.footer {
+  position: absolute;
+  bottom: 2.5%;
+  right: 3.2%;
+  display: flex;
+  align-items: flex-end;
+  gap: 1.3vw;
+  margin: 0;
+  color: #77736c;
+  font-size: clamp(6px, 0.58vw, 10px);
+  font-weight: 600;
+  line-height: 1.6;
+  letter-spacing: 0.35em;
+}
+.footer i {
+  width: 7.5vw;
+  height: 1px;
+  margin-bottom: 0.4vw;
+  background: #c9c5bc;
+}
+
+@media (max-width: 1080px) {
+  .section {
+    border-bottom-width: 7px;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+  }
+  .banner {
+    padding: 9px 14px;
+    font-size: clamp(15px, 4.6vw, 25px);
+    text-wrap: balance;
+  }
+  .composition {
+    aspect-ratio: auto;
+    display: grid;
+    grid-template-rows: 105vw auto;
+    flex: none;
+  }
+  .portfolio {
+    top: 20px;
+    left: 6%;
+    font-size: 7px;
+  }
+  .portfolio i {
+    width: 20vw;
+  }
+  .title {
+    left: 5%;
+    top: 50px;
+    font-size: clamp(44px, 22vw, 84px);
+    line-height: 1.05;
+    letter-spacing: 0.08em;
+  }
+  .portrait {
+    top: 16vw;
+    bottom: auto;
+    left: 13%;
+    width: 87%;
+    height: 89vw;
+  }
+  .marginNote {
+    left: 6%;
+    top: 79vw;
+    bottom: auto;
+    font-size: 7px;
+  }
+  .marginNote span {
+    width: 22px;
+    margin-top: 12px;
+  }
+  .profile {
+    position: relative;
+    inset: auto;
+    grid-row: 2;
+    padding: 36px 8% 68px;
+    background: #f1efea;
+  }
+  .firstName {
+    margin: 0 0 -3px;
+    font-size: 57px;
+  }
+  .lastName {
+    font-size: clamp(68px, 20vw, 110px);
+  }
+  .role {
+    margin-top: 8px;
+    font-size: 9px;
+    letter-spacing: 0.26em;
+  }
+  .redRule {
+    width: 35px;
+    margin: 20px 0 12px;
+  }
+  .intro {
+    max-width: 36ch;
+    font-size: 15px;
+  }
+  .description {
+    max-width: 38ch;
+    margin: 14px 0 20px;
+    font-size: 13px;
+  }
+  .expertise {
+    gap: 12px;
+    margin: 0 0 12px;
+    font-size: 11px;
+  }
+  .list {
+    gap: 9px;
+    font-size: 13px;
+  }
+  .list li {
+    gap: 16px;
+  }
+  .list li::before {
+    width: 7px;
+    height: 7px;
+  }
+  .footer {
+    z-index: 3;
+    bottom: 18px;
+    right: 8%;
+    gap: 12px;
+    font-size: 6px;
+  }
+  .footer i {
+    width: 45px;
+    margin-bottom: 4px;
+  }
+}
