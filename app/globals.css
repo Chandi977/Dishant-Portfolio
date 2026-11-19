@@ -4095,6 +4095,568 @@ footer {
   transform: translateX(4px);
 }
 
+/* Prem Industries Figma portfolio sections */
+.prem-case {
+  min-height: 100vh;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  background: #ecebe7;
+  color: #182332;
+  font-family: var(--font-poppins), Poppins, sans-serif;
+}
+
+.prem-canvas {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  overflow: hidden;
+  background: #142147;
+}
+
+.prem-header {
+  min-height: 390px;
+  height: auto;
+  width: 100%;
+  max-width: none;
+  padding: clamp(32px, 3vw, 56px) clamp(20px, 4vw, 76px);
+  background: #f1efea;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: clamp(12px, 1.25vw, 22px);
+}
+
+.prem-header-company {
+  position: static;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  color: #182332;
+  opacity: 1;
+  font-size: clamp(40px, 4.2vw, 72px);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  white-space: normal;
+}
+
+.prem-header-role {
+  position: static;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  font-size: clamp(28px, 3vw, 52px);
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.prem-header-role span {
+  color: #49535c;
+  opacity: 1;
+}
+
+.prem-header-role strong {
+  color: #b5461d;
+  opacity: 1;
+  font-weight: 600;
+}
+
+.prem-header-services {
+  position: static;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  color: #394451;
+  opacity: 1;
+  font-size: clamp(15px, 1.25vw, 21px);
+  line-height: 1.35;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.prem-header-summary {
+  position: static;
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  box-sizing: border-box;
+  color: #394451;
+  opacity: 1;
+  font-size: clamp(14px, 1.05vw, 18px);
+  line-height: 1.45;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.prem-header-summary p {
+  margin: 0;
+  min-height: 0;
+  max-width: none;
+}
+
+.prem-tabs {
+  position: absolute;
+  left: 0;
+  top: 390px;
+  height: 78px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: #2f4689;
+  z-index: 2;
+}
+
+.prem-tab-pill {
+  position: absolute;
+  top: 12px;
+  width: calc(25% - 14px);
+  height: 54px;
+  border-radius: 27px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: #142147;
+  backdrop-filter: blur(7px);
+  box-shadow: 0 6px 18px rgba(8, 14, 42, 0.2);
+  transition:
+    left 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.35s ease,
+    border-color 0.35s ease;
+  pointer-events: none;
+}
+
+.prem-tabs button {
+  position: relative;
+  z-index: 1;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-family: var(--font-poppins), Poppins, sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.prem-tabs button:focus-visible {
+  outline: 2px solid #ffb36b;
+  outline-offset: -5px;
+}
+
+.prem-panel {
+  position: relative;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+
+.prem-panel h1,
+.prem-panel h2,
+.prem-description,
+.prem-link {
+  position: absolute;
+  z-index: 1;
+}
+
+.prem-panel h1 {
+  left: 20px;
+  right: 20px;
+  top: 142px;
+  margin: 0;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.prem-panel h2 {
+  left: 20px;
+  right: 20px;
+  top: 232px;
+  margin: 0;
+  font-size: 27px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.prem-description {
+  left: clamp(16px, 3vw, 32px);
+  right: clamp(16px, 3vw, 32px);
+  width: calc(100% - clamp(32px, 6vw, 64px));
+  max-width: none;
+  top: 201px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-size: 15px;
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.prem-panel--social {
+  background: #142147;
+  padding-top: 424px;
+  padding-bottom: 80px;
+}
+
+.prem-panel--social h1 {
+  top: 142px;
+}
+
+.prem-panel--social .prem-description {
+  top: 201px;
+}
+
+.prem-social-art {
+  position: relative;
+  width: 60%;
+  height: auto;
+  aspect-ratio: 720 / 2616;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 2px solid #0059ff;
+  border-radius: 19px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  background: #dfe4ed;
+}
+
+.prem-social-art img {
+  object-fit: contain;
+  object-position: top center;
+}
+
+.prem-panel--uiux {
+  background: white;
+  color: white;
+  padding-top: 397px;
+  padding-bottom: 80px;
+}
+
+.prem-panel--uiux::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 379px;
+  background: #f11824;
+}
+
+.prem-panel--uiux h1 { top: 142.95px; }
+.prem-panel--uiux h2 { top: 231.95px; }
+.prem-panel--uiux .prem-description { top: 281px; }
+
+.prem-uiux-grid {
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+  gap: 42px;
+  background: white;
+}
+
+.prem-uiux-grid img {
+  width: 100%;
+  max-width: none;
+}
+
+.prem-uiux-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 8px solid rgba(0, 0, 0, 0.42);
+}
+
+.prem-link {
+  position: static;
+  display: block;
+  width: 60%;
+  max-width: none;
+  margin: 30px auto 0;
+  color: #ffff00;
+  font-family: Montserrat, var(--font-poppins), sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: underline;
+}
+
+.prem-panel--expo {
+  padding-top: 414px;
+  padding-bottom: 80px;
+  background: #142147;
+}
+
+.prem-expo-grid {
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+  gap: 28px;
+  background: #142147;
+}
+
+.prem-expo-grid img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
+.prem-expo-grid img {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.prem-panel--expo h1 { top: 142px; }
+.prem-panel--expo h2 { top: 227.9px; }
+.prem-panel--expo .prem-description { top: 277.4px; }
+
+.prem-panel--catalogues {
+  padding-top: 379px;
+  padding-bottom: 80px;
+  background: #f11824;
+}
+
+.prem-catalogue-art {
+  position: relative;
+  width: 60%;
+  height: auto;
+  aspect-ratio: 1792 / 7718;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 19px;
+  background: #dfe4ed;
+}
+
+.prem-panel--catalogues h1 { top: 140px; }
+.prem-panel--catalogues h2 { top: 225px; }
+.prem-panel--catalogues .prem-description { top: 278px; }
+
+.prem-catalogue-art img {
+  object-fit: contain;
+  object-position: top center;
+}
+
+@media (max-width: 900px) {
+  .prem-case {
+    background: #142147;
+  }
+
+  .prem-canvas {
+    width: 100%;
+  }
+
+  .prem-header {
+    min-height: 430px;
+    height: 430px;
+    padding: 28px 16px;
+    gap: 12px;
+  }
+
+  .prem-header-company {
+    width: 100%;
+    padding: 0;
+    font-size: clamp(30px, 8vw, 48px);
+    line-height: 1.08;
+    white-space: normal;
+  }
+
+  .prem-header-role {
+    width: 100%;
+    padding: 0;
+    flex-wrap: wrap;
+    row-gap: 2px;
+  }
+
+  .prem-header-services {
+    width: 100%;
+    padding: 0;
+  }
+
+  .prem-header-summary {
+    width: 100%;
+    padding: 0;
+  }
+
+  .prem-header-summary p {
+    min-height: 0;
+    margin-bottom: 3px;
+  }
+
+  .prem-header-role {
+    gap: 8px;
+    font-size: clamp(23px, 6.4vw, 36px);
+  }
+
+  .prem-header-services {
+    font-size: clamp(12px, 3vw, 16px);
+  }
+
+  .prem-header-summary {
+    width: 100%;
+    padding: 0;
+    font-size: clamp(11px, 2.5vw, 14px);
+    line-height: 1.4;
+  }
+
+  .prem-tabs {
+    top: 430px;
+    width: 100%;
+    height: 68px;
+  }
+
+  .prem-tab-pill {
+    top: 10px;
+    height: 48px;
+  }
+
+  .prem-tabs button {
+    padding: 0 4px;
+    font-size: clamp(10px, 3vw, 15px);
+  }
+
+  .prem-panel h1 {
+    margin: 0;
+    font-size: clamp(27px, 7.5vw, 36px);
+  }
+
+  .prem-panel h2 {
+    margin: 0;
+    font-size: clamp(18px, 5.2vw, 27px);
+  }
+
+  .prem-description {
+    font-size: 13px;
+  }
+
+  .prem-panel {
+    width: 100%;
+  }
+
+  .prem-social-art {
+    width: calc(100% - 32px);
+    height: auto;
+    max-height: none;
+  }
+
+  .prem-uiux-grid,
+  .prem-expo-grid {
+    width: calc(100% - 32px);
+  }
+
+  .prem-catalogue-art {
+    width: calc(100% - 32px);
+    height: auto;
+    max-height: none;
+  }
+}
+
+/* Prem Industries follows the light, artwork-led presentation from the
+   portfolio reference rather than the atmospheric treatment used by the
+   other case studies. */
+.case-page--prem {
+  --paper: #eeece8;
+  --ink: #171717;
+  --muted: #65625d;
+  --line: rgba(23, 23, 23, 0.2);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.case-page--prem .case-nav {
+  mix-blend-mode: normal;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  background: rgba(238, 236, 232, 0.92);
+  backdrop-filter: blur(14px);
+}
+
+.case-page--prem .case-hero {
+  min-height: min(78vh, 760px);
+  padding: clamp(5rem, 12vw, 10rem) clamp(1.2rem, 7vw, 7rem) clamp(4rem, 8vw, 7rem);
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.case-page--prem .case-hero-content {
+  max-width: 1000px;
+  text-align: left;
+}
+
+.case-page--prem .case-hero-meta {
+  justify-content: flex-start;
+  gap: clamp(1rem, 4vw, 3.5rem);
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+  color: var(--ink);
+}
+
+.case-page--prem .case-hero-number {
+  color: #b3261e;
+}
+
+.case-page--prem .case-hero-title {
+  justify-content: flex-start !important;
+  text-align: left !important;
+  max-width: 11ch !important;
+  font-size: clamp(4rem, 10.5vw, 10rem) !important;
+  line-height: 0.82 !important;
+  letter-spacing: -0.055em !important;
+  color: var(--ink);
+}
+
+.case-page--prem .case-gallery {
+  padding: 0 clamp(1.2rem, 7vw, 7rem) clamp(4rem, 10vw, 9rem);
+}
+
+.case-page--prem .case-gallery-stack {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+  align-items: start;
+  gap: clamp(1rem, 4vw, 4rem);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.case-page--prem .case-gallery-item:first-child {
+  grid-row: span 2;
+}
+
+.case-page--prem .case-gallery-item:nth-child(2) {
+  margin-top: clamp(2rem, 12vw, 12rem);
+}
+
+.case-page--prem .case-gallery-image-wrap {
+  border-radius: 0;
+  background: #d3d0ca;
+}
+
+.case-page--prem .case-gallery-img {
+  filter: none;
+}
+
+.case-page--prem .case-gallery-overlay {
+  opacity: 1;
+  padding: clamp(1rem, 2vw, 2rem);
+  background: linear-gradient(180deg, transparent 62%, rgba(0, 0, 0, 0.58) 100%);
+}
+
+.case-page--prem .case-gallery-title {
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.4rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-page--prem .case-gallery-caption {
+  font-size: 12px;
+  line-height: 1.45;
+  max-width: 38ch;
+}
+
 /* Mobile */
 @media (max-width: 900px) {
   .case-nav {
@@ -4181,6 +4743,28 @@ footer {
 
   .case-nav-project svg {
     display: none;
+  }
+
+  .case-page--prem .case-hero {
+    min-height: 72vh;
+    padding: 5rem 16px 3rem;
+  }
+
+  .case-page--prem .case-hero-title {
+    font-size: clamp(3.8rem, 18vw, 7rem) !important;
+  }
+
+  .case-page--prem .case-gallery {
+    padding: 0 16px 50px;
+  }
+
+  .case-page--prem .case-gallery-stack {
+    display: flex;
+    gap: 32px;
+  }
+
+  .case-page--prem .case-gallery-item:nth-child(2) {
+    margin-top: 0;
   }
 }
 

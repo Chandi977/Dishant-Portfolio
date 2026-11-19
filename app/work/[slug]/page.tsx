@@ -6,6 +6,7 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { getProject, projects } from '@/data/projects';
 import CaseHero from '@/components/CaseHero';
 import Lightfall from '@/components/Lightfall';
+import PremIndustriesCase from '@/components/PremIndustriesCase';
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -24,7 +25,11 @@ export default async function ProjectPage({ params }: Props) {
   const project = getProject(slug);
   if (!project) notFound();
 
-  const allImages = [
+  if (project.slug === 'prem-industries') {
+    return <PremIndustriesCase />;
+  }
+
+  const imageEntries = [
     ...(project.coverImage
       ? [
           {
@@ -43,35 +48,43 @@ export default async function ProjectPage({ params }: Props) {
       aspectRatio: s.aspectRatio ?? '16 / 9',
     })) ?? []),
   ];
+  const seenSources = new Set<string>();
+  const allImages = imageEntries.filter((image) => {
+    if (seenSources.has(image.src)) return false;
+    seenSources.add(image.src);
+    return true;
+  });
 
   return (
-    <main className="case-page">
-      <div className="case-page-bg" aria-hidden="true">
-        <Lightfall
-          colors={['#ffffff']}
-          backgroundColor="#000000"
-          speed={0.3}
-          streakCount={2}
-          streakWidth={0.8}
-          twinkle={0.3}
-          backgroundGlow={0.1}
-          headGlow={0.6}
-          bloom={0.35}
-          mouseInteraction
-          holdToWarp
-          intro
-          streakLength={1}
-          density={0.6}
-          glow={1}
-          depth={0.5}
-          zoom={3}
-          mouseStrength={0.4}
-          mouseRadius={0.45}
-          lens={0.5}
-          fade={0}
-          lightMode={false}
-        />
-      </div>
+    <main className={`case-page${project.slug === 'prem-industries' ? ' case-page--prem' : ''}`}>
+      {project.slug !== 'prem-industries' && (
+        <div className="case-page-bg" aria-hidden="true">
+          <Lightfall
+            colors={['#ffffff']}
+            backgroundColor="#000000"
+            speed={0.3}
+            streakCount={2}
+            streakWidth={0.8}
+            twinkle={0.3}
+            backgroundGlow={0.1}
+            headGlow={0.6}
+            bloom={0.35}
+            mouseInteraction
+            holdToWarp
+            intro
+            streakLength={1}
+            density={0.6}
+            glow={1}
+            depth={0.5}
+            zoom={3}
+            mouseStrength={0.4}
+            mouseRadius={0.45}
+            lens={0.5}
+            fade={0}
+            lightMode={false}
+          />
+        </div>
+      )}
 
       <header className="case-nav">
         <Link href="/" className="case-nav-back">
